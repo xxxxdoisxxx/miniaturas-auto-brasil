@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Miniaturas Auto Brasil - Loja premium de miniaturas automotivas realistas, clássicas, populares e esportivas."
+    />
+    <title>Miniaturas Auto Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="Miniaturas Auto Brasil home">
+          <span class="logo-mark">MAB</span>
+          <span>
+            <strong>Miniaturas</strong>
+            <small>Auto Brasil</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#catalogo">Catálogo</a>
+          <a href="#categorias">Categorias</a>
+          <a href="#entrega">Entrega</a>
+          <a href="#avaliacoes">Avaliações</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+
+        <a class="btn btn-primary nav-cta" href="#catalogo">Explorar</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Coleção premium</span>
+            <h1>SEU CARRO FAVORITO, EM MINIATURA!</h1>
+            <p>
+              Miniaturas automotivas para quem é apaixonado por carros. Clássicos
+              inesquecíveis, modelos populares e máquinas que marcaram gerações.
+            </p>
+            <div class="hero-actions">
+              <a href="#catalogo" class="btn btn-primary">EXPLORAR CATÁLOGO</a>
+              <a href="#categorias" class="btn btn-secondary">VER CARROS CLÁSSICOS</a>
+              <a href="https://wa.me/5515988086215?text=Olá!%20Vim%20pelo%20site%20Miniaturas%20Auto%20Brasil%20e%20gostaria%20de%20conhecer%20as%20miniaturas%20disponíveis." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">FALAR PELO WHATSAPP</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Coleção de miniaturas automotivas">
+            <div class="miniature-card card-one">
+              <img
+                src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80"
+                alt="Miniatura de carro clássico em ambiente premium"
+              />
+            </div>
+            <div class="miniature-card card-two">
+              <img
+                src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80"
+                alt="Miniatura de carro esportivo em destaque"
+              />
+            </div>
+            <div class="miniature-card card-three">
+              <img
+                src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=900&q=80"
+                alt="Miniatura de carro popular brasileiro"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="benefits-strip">
+        <div class="container benefits-grid">
+          <span>📦 Entregamos para todo o Brasil.</span>
+          <span>💳 5% de desconto no Pix.</span>
+          <span>💬 Atendimento direto pelo WhatsApp.</span>
+        </div>
+      </div>
+
+      <section id="catalogo" class="section section-light">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow dark">Coleção em destaque</p>
+            <h2>Miniaturas em metal que unem paixão e nostalgia</h2>
+          </div>
+
+          <div class="catalog-toolbar">
+            <div class="category-filters" id="categoryFilters">
+              <button class="filter-btn active" data-filter="all">Todos</button>
+              <button class="filter-btn" data-filter="classicos">Clássicos Brasileiros</button>
+              <button class="filter-btn" data-filter="populares">Populares Brasileiros</button>
+              <button class="filter-btn" data-filter="esportivos">Esportivos e Importados</button>
+              <button class="filter-btn" data-filter="utilitarios">Caminhonetes e Utilitários</button>
+            </div>
+          </div>
+
+          <div class="products-grid" id="productGrid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="categorias" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Categorias</p>
+            <h2>Encontre os modelos que marcaram a história do Brasil</h2>
+          </div>
+
+          <div class="category-list">
+            <article class="category-card">
+              <h3>Clássicos brasileiros</h3>
+              <ul>
+                <li>Volkswagen Fusca</li>
+                <li>Chevrolet Opala</li>
+                <li>Chevrolet Chevette</li>
+                <li>Volkswagen Brasília</li>
+                <li>Fiat 147</li>
+                <li>Volkswagen Santana</li>
+                <li>Ford Maverick</li>
+              </ul>
+            </article>
+
+            <article class="category-card">
+              <h3>Populares brasileiros</h3>
+              <ul>
+                <li>Volkswagen Gol</li>
+                <li>Fiat Uno</li>
+                <li>Volkswagen Saveiro</li>
+                <li>Chevrolet Corsa</li>
+                <li>Chevrolet Celta</li>
+                <li>Chevrolet Astra</li>
+                <li>Volkswagen Golf</li>
+                <li>Fiat Palio</li>
+              </ul>
+            </article>
+
+            <article class="category-card">
+              <h3>Esportivos e importados</h3>
+              <ul>
+                <li>Ford Mustang</li>
+                <li>Chevrolet Camaro</li>
+                <li>Nissan Skyline</li>
+                <li>Toyota Supra</li>
+                <li>Lamborghini</li>
+                <li>Ferrari</li>
+                <li>Porsche</li>
+              </ul>
+            </article>
+
+            <article class="category-card">
+              <h3>Caminhonetes e utilitários</h3>
+              <ul>
+                <li>Volkswagen Saveiro</li>
+                <li>Chevrolet S10</li>
+                <li>Ford Ranger</li>
+                <li>Toyota Hilux</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark delivery" id="entrega">
+        <div class="container delivery-grid">
+          <div>
+            <p class="eyebrow">Entrega</p>
+            <h2>📦 ENVIAMOS PARA TODO O BRASIL!</h2>
+            <p>
+              Escolha sua miniatura favorita e receba em sua casa. Informe seu CEP para
+              consultar as opções de envio e o prazo estimado de entrega.
+            </p>
+
+            <div class="cep-box">
+              <label for="cepHome">CEP</label>
+              <div class="cep-row">
+                <input id="cepHome" type="text" inputmode="numeric" maxlength="9" placeholder="Ex.: 01000-000" />
+                <button type="button" id="consultCepBtn" class="btn btn-primary">Consultar</button>
+              </div>
+              <p id="cepMessage" class="cep-message">Consulte o valor e o prazo de entrega pelo WhatsApp.</p>
+            </div>
+          </div>
+
+          <div class="delivery-panel">
+            <div class="mini-card">
+              <span>💰 PAGUE NO PIX E GANHE 5% DE DESCONTO!</span>
+              <small>Condição comercial confirmada no atendimento.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="avaliacoes" class="section section-light">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow dark">Cliente em foco</p>
+            <h2>OPINIÕES DOS NOSSOS CLIENTES</h2>
+          </div>
+
+          <div id="reviewList" class="reviews-grid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-mark">MAB</span>
+            <span>
+              <strong>Miniaturas</strong>
+              <small>Auto Brasil</small>
+            </span>
+          </a>
+          <p>A paixão por carros em cada detalhe!</p>
+        </div>
+
+        <div>
+          <h4>Loja</h4>
+          <ul>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#categorias">Categorias</a></li>
+            <li><a href="#entrega">Entrega</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Informações</h4>
+          <ul>
+            <li><a href="privacy.html">Política de privacidade</a></li>
+            <li><a href="terms.html">Termos de uso</a></li>
+            <li><a href="returns.html">Trocas e devoluções</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5515988086215" target="_blank" rel="noopener noreferrer">WhatsApp: (15) 98808-6215</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/5515988086215?text=Olá!%20Vim%20pelo%20site%20Miniaturas%20Auto%20Brasil%20e%20gostaria%20de%20conhecer%20as%20miniaturas%20disponíveis."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar pelo WhatsApp"
+    >
+      WhatsApp
+    </a>
+
+    <div id="orderModal" class="modal hidden" aria-modal="true" role="dialog" aria-labelledby="orderTitle">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-panel">
+        <button type="button" class="modal-close" data-close="true" aria-label="Fechar modal">×</button>
+        <h3 id="orderTitle">Finalizar pedido</h3>
+
+        <form id="orderForm" novalidate>
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="clienteNome">Nome completo</label>
+              <input id="clienteNome" name="clienteNome" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="clienteWhats">Número de WhatsApp</label>
+              <input id="clienteWhats" name="clienteWhats" type="tel" required placeholder="(11) 99999-9999" />
+            </div>
+
+            <div class="field-group">
+              <label for="cep">CEP</label>
+              <input id="cep" name="cep" type="text" required maxlength="9" />
+            </div>
+            <div class="field-group">
+              <label for="estado">Estado</label>
+              <input id="estado" name="estado" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="cidade">Cidade</label>
+              <input id="cidade" name="cidade" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="bairro">Bairro</label>
+              <input id="bairro" name="bairro" type="text" required />
+            </div>
+            <div class="field-group span-2">
+              <label for="rua">Rua</label>
+              <input id="rua" name="rua" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="numero">Número</label>
+              <input id="numero" name="numero" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="complemento">Complemento</label>
+              <input id="complemento" name="complemento" type="text" />
+            </div>
+
+            <div class="field-group">
+              <label for="miniaturaNome">Miniatura</label>
+              <input id="miniaturaNome" name="miniaturaNome" type="text" readonly />
+            </div>
+            <div class="field-group">
+              <label for="quantidade">Quantidade</label>
+              <input id="quantidade" name="quantidade" type="number" min="1" value="1" required />
+            </div>
+            <div class="field-group">
+              <label for="escalaPedido">Escala</label>
+              <input id="escalaPedido" name="escalaPedido" type="text" />
+            </div>
+            <div class="field-group span-2">
+              <label for="observacoes">Observações</label>
+              <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+            </div>
+
+            <div class="field-group span-2">
+              <label for="formaPagamento">Forma de pagamento preferida</label>
+              <select id="formaPagamento" name="formaPagamento" required>
+                <option value="Pix com 5% de desconto">Pix com 5% de desconto</option>
+                <option value="Cartão de crédito">Cartão de crédito</option>
+                <option value="Cartão parcelado">Cartão parcelado</option>
+                <option value="Boleto bancário">Boleto bancário</option>
+              </select>
+            </div>
+          </div>
+
+          <label class="privacy-check">
+            <input type="checkbox" id="privacyCheck" required />
+            Confirmo que li e concordo com a política de privacidade.
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-block">ENVIAR PEDIDO PELO WHATSAPP</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

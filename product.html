@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Produto | Miniaturas Auto Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="product">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="Miniaturas Auto Brasil home">
+          <span class="logo-mark">MAB</span>
+          <span>
+            <strong>Miniaturas</strong>
+            <small>Auto Brasil</small>
+          </span>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html#catalogo">Catálogo</a>
+          <a href="index.html#categorias">Categorias</a>
+          <a href="index.html#entrega">Entrega</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+        <a class="btn btn-primary nav-cta" href="index.html#catalogo">Voltar ao catálogo</a>
+      </div>
+    </header>
+
+    <main class="product-page">
+      <div class="container product-layout" id="productDetail"></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="index.html" class="logo footer-logo">
+            <span class="logo-mark">MAB</span>
+            <span>
+              <strong>Miniaturas</strong>
+              <small>Auto Brasil</small>
+            </span>
+          </a>
+          <p>A paixão por carros em cada detalhe!</p>
+        </div>
+        <div>
+          <h4>Loja</h4>
+          <ul>
+            <li><a href="index.html#catalogo">Catálogo</a></li>
+            <li><a href="index.html#categorias">Categorias</a></li>
+            <li><a href="index.html#entrega">Entrega</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informações</h4>
+          <ul>
+            <li><a href="privacy.html">Política de privacidade</a></li>
+            <li><a href="terms.html">Termos de uso</a></li>
+            <li><a href="returns.html">Trocas e devoluções</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5515988086215" target="_blank" rel="noopener noreferrer">WhatsApp: (15) 98808-6215</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/5515988086215?text=Olá!%20Vim%20pelo%20site%20Miniaturas%20Auto%20Brasil%20e%20gostaria%20de%20conhecer%20as%20miniaturas%20disponíveis."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar pelo WhatsApp"
+    >
+      WhatsApp
+    </a>
+
+    <div id="orderModal" class="modal hidden" aria-modal="true" role="dialog" aria-labelledby="orderTitle">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-panel">
+        <button type="button" class="modal-close" data-close="true" aria-label="Fechar modal">×</button>
+        <h3 id="orderTitle">Finalizar pedido</h3>
+
+        <form id="orderForm" novalidate>
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="clienteNome">Nome completo</label>
+              <input id="clienteNome" name="clienteNome" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="clienteWhats">Número de WhatsApp</label>
+              <input id="clienteWhats" name="clienteWhats" type="tel" required placeholder="(11) 99999-9999" />
+            </div>
+
+            <div class="field-group">
+              <label for="cep">CEP</label>
+              <input id="cep" name="cep" type="text" required maxlength="9" />
+            </div>
+            <div class="field-group">
+              <label for="estado">Estado</label>
+              <input id="estado" name="estado" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="cidade">Cidade</label>
+              <input id="cidade" name="cidade" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="bairro">Bairro</label>
+              <input id="bairro" name="bairro" type="text" required />
+            </div>
+            <div class="field-group span-2">
+              <label for="rua">Rua</label>
+              <input id="rua" name="rua" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="numero">Número</label>
+              <input id="numero" name="numero" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="complemento">Complemento</label>
+              <input id="complemento" name="complemento" type="text" />
+            </div>
+
+            <div class="field-group">
+              <label for="miniaturaNome">Miniatura</label>
+              <input id="miniaturaNome" name="miniaturaNome" type="text" readonly />
+            </div>
+            <div class="field-group">
+              <label for="quantidade">Quantidade</label>
+              <input id="quantidade" name="quantidade" type="number" min="1" value="1" required />
+            </div>
+            <div class="field-group">
+              <label for="escalaPedido">Escala</label>
+              <input id="escalaPedido" name="escalaPedido" type="text" />
+            </div>
+            <div class="field-group span-2">
+              <label for="observacoes">Observações</label>
+              <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+            </div>
+
+            <div class="field-group span-2">
+              <label for="formaPagamento">Forma de pagamento preferida</label>
+              <select id="formaPagamento" name="formaPagamento" required>
+                <option value="Pix com 5% de desconto">Pix com 5% de desconto</option>
+                <option value="Cartão de crédito">Cartão de crédito</option>
+                <option value="Cartão parcelado">Cartão parcelado</option>
+                <option value="Boleto bancário">Boleto bancário</option>
+              </select>
+            </div>
+          </div>
+
+          <label class="privacy-check">
+            <input type="checkbox" id="privacyCheck" required />
+            Confirmo que li e concordo com a política de privacidade.
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-block">ENVIAR PEDIDO PELO WHATSAPP</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

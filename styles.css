@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administração | Miniaturas Auto Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="admin">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="logo" aria-label="Miniaturas Auto Brasil home">
+          <span class="logo-mark">MAB</span>
+          <span>
+            <strong>Miniaturas</strong>
+            <small>Auto Brasil</small>
+          </span>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html">Site</a>
+          <a href="index.html#catalogo">Catálogo</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="admin-page">
+      <div class="container admin-shell">
+        <section id="adminLogin" class="admin-card login-card">
+          <h1>Área administrativa</h1>
+          <p>Faça login para gerenciar produtos, avaliações e pedidos.</p>
+          <form id="loginForm">
+            <div class="field-group">
+              <label for="adminEmail">E-mail</label>
+              <input id="adminEmail" type="email" placeholder="admin@miniaturasautobrasil.com" required />
+            </div>
+            <div class="field-group">
+              <label for="adminPassword">Senha</label>
+              <input id="adminPassword" type="password" placeholder="Senha" required />
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+          </form>
+        </section>
+
+        <section id="adminDashboard" class="admin-dashboard hidden">
+          <div class="dashboard-header">
+            <h1>Painel administrativo</h1>
+            <button id="logoutBtn" class="btn btn-secondary">Sair</button>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="admin-card">
+              <h2>Cadastrar/editar produto</h2>
+              <form id="productForm">
+                <div class="field-group">
+                  <label for="productId">ID do produto</label>
+                  <input id="productId" type="text" placeholder="ex: gol" required />
+                </div>
+                <div class="field-group">
+                  <label for="productName">Nome</label>
+                  <input id="productName" type="text" required />
+                </div>
+                <div class="field-group">
+                  <label for="productCategory">Categoria</label>
+                  <select id="productCategory" required>
+                    <option value="classicos">Clássicos Brasileiros</option>
+                    <option value="populares">Populares Brasileiros</option>
+                    <option value="esportivos">Esportivos e Importados</option>
+                    <option value="utilitarios">Caminhonetes e Utilitários</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="productScale">Escala</label>
+                  <input id="productScale" type="text" placeholder="1:64" />
+                </div>
+                <div class="field-group">
+                  <label for="productMaterial">Material</label>
+                  <input id="productMaterial" type="text" placeholder="Metal" />
+                </div>
+                <div class="field-group">
+                  <label for="productPrice">Preço (R$)</label>
+                  <input id="productPrice" type="number" min="0" step="0.01" placeholder="0.00" />
+                </div>
+                <div class="field-group">
+                  <label for="productImage">URL da imagem principal</label>
+                  <input id="productImage" type="url" required />
+                </div>
+                <div class="field-group">
+                  <label for="productDescription">Descrição</label>
+                  <textarea id="productDescription" rows="4" required></textarea>
+                </div>
+                <label class="inline-check">
+                  <input id="productPixDiscount" type="checkbox" checked />
+                  Desconto Pix habilitado
+                </label>
+                <button type="submit" class="btn btn-primary btn-block">Salvar produto</button>
+              </form>
+            </article>
+
+            <article class="admin-card">
+              <h2>Configuração da loja</h2>
+              <div class="field-group">
+                <label for="configWhats">WhatsApp</label>
+                <input id="configWhats" type="text" value="(15) 98808-6215" />
+              </div>
+              <div class="field-group">
+                <label for="configLink">Link oficial</label>
+                <input id="configLink" type="url" value="https://wa.me/5515988086215" />
+              </div>
+              <label class="inline-check">
+                <input id="globalPixDiscount" type="checkbox" checked />
+                Habilitar desconto Pix em todos os produtos
+              </label>
+              <button id="saveConfigBtn" class="btn btn-primary btn-block">Salvar configurações</button>
+            </article>
+
+            <article class="admin-card">
+              <h2>Cadastrar avaliação</h2>
+              <form id="reviewForm">
+                <div class="field-group">
+                  <label for="reviewName">Nome</label>
+                  <input id="reviewName" type="text" required />
+                </div>
+                <div class="field-group">
+                  <label for="reviewRating">Nota</label>
+                  <select id="reviewRating" required>
+                    <option value="5">5 estrelas</option>
+                    <option value="4">4 estrelas</option>
+                    <option value="3">3 estrelas</option>
+                    <option value="2">2 estrelas</option>
+                    <option value="1">1 estrela</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="reviewComment">Comentário</label>
+                  <textarea id="reviewComment" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Salvar avaliação</button>
+              </form>
+            </article>
+
+            <article class="admin-card full-span">
+              <h2>Pedidos registrados</h2>
+              <div id="ordersList" class="orders-list"></div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
